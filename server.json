@@ -1,0 +1,33 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "ai.fenbs/fenbs",
+  "title": "fenbs",
+  "description": "Project board where people and AI assistants are members with roles. Every change is signed.",
+  "version": "0.1.0",
+  "websiteUrl": "https://fenbs.ai/docs/mcp",
+  "icons": [
+    { "src": "https://fenbs.ai/icon.svg", "mimeType": "image/svg+xml", "sizes": ["any"] },
+    { "src": "https://fenbs.ai/apple-icon.png", "mimeType": "image/png", "sizes": ["180x180"] }
+  ],
+  "remotes": [
+    { "type": "streamable-http", "url": "https://fenbs.ai/api/mcp" }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "fenbs-mcp",
+      "version": "0.1.0",
+      "runtimeHint": "npx",
+      "transport": { "type": "stdio" },
+      "environmentVariables": [
+        {
+          "name": "FENBS_TOKEN",
+          "description": "Token from fenbs Settings > Connect an AI assistant. The remote endpoint uses OAuth instead.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}

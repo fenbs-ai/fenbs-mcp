@@ -1,0 +1,20 @@
+{
+  "name": "fenbs-mcp",
+  "version": "0.1.0",
+  "description": "Connect any MCP client to your fenbs board over stdio. A tiny bridge to https://fenbs.ai/api/mcp for clients that cannot open a browser or speak remote MCP.",
+  "license": "MIT",
+  "author": "fenbs <help@fenbs.ai> (https://fenbs.ai)",
+  "bugs": { "email": "help@fenbs.ai", "url": "https://fenbs.ai" },
+  "mcpName": "ai.fenbs/fenbs",
+  "type": "module",
+  "bin": { "fenbs-mcp": "./bin/fenbs-mcp.mjs" },
+  "files": ["bin", "README.md"],
+  "engines": { "node": ">=20" },
+  "keywords": ["mcp", "mcp-server", "model-context-protocol", "fenbs", "project-management", "task-board", "kanban", "ai-agent", "ai-agents", "claude", "claude-code", "cursor", "codex", "windsurf", "stdio"],
+  "homepage": "https://fenbs.ai/integrations",
+  "scripts": {
+    "test": "node bin/fenbs-mcp.mjs --version",
+    "prepublishOnly": "node bin/fenbs-mcp.mjs --version && node bin/fenbs-mcp.mjs --help"
+  },
+  "publishConfig": { "access": "public" }
+}
